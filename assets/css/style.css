@@ -70,7 +70,7 @@ header p {
   padding: 2em;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .card-1 {
@@ -89,6 +89,12 @@ header p {
   border-top: 4px solid var(--blue);
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .card-title {
   color: var(--very-dark-blue);
   font-weight: 600;
@@ -102,4 +108,33 @@ header p {
 .icon {
   width: 25%;
   align-self: flex-end;
+}
+
+@media screen and (min-width: 575px) {
+  .card-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    max-width: 350px;
+  }
+
+  .icon {
+    align-self: flex-end;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+  }
+
+  header p {
+    color: var(--grayish-blue);
+    font-weight: 400;
+    max-width: 60%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
 }
